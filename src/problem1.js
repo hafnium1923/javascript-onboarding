@@ -36,3 +36,5 @@ function multAll(num) {
   return mult;
 }
 module.exports = problem1;
+
+/* 1번문제: 약 15분 걸림 */
