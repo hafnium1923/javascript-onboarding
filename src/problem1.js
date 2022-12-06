@@ -11,6 +11,8 @@ function problem1(pobi, crong) {
 function isWrongPage(left, right) {
   if(left + 1 != right) return 1;
   if(left == 1 || right == 400) return 1;
+  if(left % 2 != 1) return 1;
+  if(right %2 != 0) return 1;
 }
 function whichMoreBig(left, right) {
   const leftBig = plusAll(left) > multAll(left) ? plusAll(left) : multAll(left);
@@ -36,5 +38,4 @@ function multAll(num) {
   return mult;
 }
 module.exports = problem1;
-
 /* 1번문제: 약 15분 걸림 */
