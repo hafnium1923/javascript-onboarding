@@ -13,9 +13,18 @@ isWrongCryptogrm() -  문자열 유효 검사
     예외 - 길이 1이상 1000이하
 repetitonWord() - 겹치는 문자가 있는지 확인
 deletWord() - 겹치는 문자 삭제하고 남은 문자열 return
+    
+    substring -> index기준으로 문자열 자르기
 
 ## 3번 문제
 countClap() - 박수 횟수 계산
 isRightNum() - 숫자 범위 오류 처리
     예외) - 1미만 10000초과일시 에러
 **컨테이너 사용하는거 진짜 기발한 생각이었다 과거의 나.. 1승적립
+
+## 4번 문제
+reverseWord() -  문자열을 반대로 s저장 후 출력
+isRightString() - 문자열 길이 유효 
+    
+    fromCodePoint > 아스키코드를 문자로
+    charCodeAt > 문자를 아스키코드로
