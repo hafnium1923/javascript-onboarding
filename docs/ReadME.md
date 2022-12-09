@@ -13,3 +13,5 @@ isWrongCryptogrm() -  문자열 유효 검사
     예외 - 길이 1이상 1000이하
 repetitonWord() - 겹치는 문자가 있는지 확인
 deletWord() - 겹치는 문자 삭제하고 남은 문자열 return
+
+## 3번 문제
