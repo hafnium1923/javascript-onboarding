@@ -1,28 +1,25 @@
 function problem4(word) {
   var answer;
+  isRightString(word);
   answer = reverseWord(word);
-  console.log(answer);
   return answer;
 }
-function reverseWord(word){
-  let reWord ="";
-  for(let i = 0; i < word.length; i++){
-    if(65<= word.charCodeAt(i) && word.charCodeAt(i)<= 90)
-      reWord += String.fromCharCode(155 - word.charCodeAt(i));
-    else if(97<= word.charCodeAt(i) && word.charCodeAt(i)<= 122)
-      reWord += String.fromCharCode(219 - word.charCodeAt(i));
-    else 
-      reWord += word[i];
-  }
-  return reWord;
-}
-/* 
-A = 65
-Z = 90
-a = 97
-z = 122
 
-reverse 되는 애들끼리 더하면 항상 같은 값이라는걸 이용해서
-아스키 코드로 풀어보았다.
-*/
+function isRightString(word) {
+  if(word.length < 1 || word.length > 1000 ) throw '문자열 길이 오류';
+}
+function reverseWord(word) {
+  let reverse ='';
+  for(let i = 0; i <word.length; i++) { 
+    if('A' <= word[i] && word[i] <= 'Z') {
+      reverse +=  String.fromCodePoint(155 - word.charCodeAt(i));
+    }
+    else if('a' <= word[i] && word[i] <= 'z') {
+      reverse +=  String.fromCodePoint(219 - word.charCodeAt(i));
+    }
+    else reverse += word[i];
+  }
+  return reverse;
+}
+problem4('I love you');
 module.exports = problem4;
